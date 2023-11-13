@@ -1,0 +1,44 @@
+{
+    "name": "ts-package-template",
+    "version": "0.0.0",
+    "description": "Typescript npm package template",
+    "exports": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "prepare": "husky install",
+        "clean": "rm -rf dist",
+        "start": "tsc -w",
+        "build": "pnpm clean && tsup src/index.ts",
+        "release": "pnpm run build && changeset publish",
+        "fix:prettier": "prettier \"src/**/*.ts\" --write",
+        "fix:lint": "eslint src --ext .ts --fix",
+        "changeset": "npx changeset",
+        "changeset:version": "npx changeset version"
+    },
+    "keywords": [
+        "typescript",
+        "npm",
+        "template",
+        "package"
+    ],
+    "author": "Hyungtak Jin",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@changesets/cli": "^2.26.2",
+        "@types/node": "^20.9.0",
+        "@typescript-eslint/eslint-plugin": "^6.2.0",
+        "@typescript-eslint/parser": "^6.2.0",
+        "eslint": "^8.45.0",
+        "eslint-plugin-unused-imports": "^3.0.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.2.3",
+        "prettier": "^3.0.0",
+        "tsup": "^7.1.0",
+        "typescript": "^5.1.6"
+    }
+}
