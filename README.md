@@ -32,6 +32,12 @@ $ pnpm install && pnpm prepare
 $ pnpm start
 ```
 
+## Test
+
+```bash
+$ pnpm test
+```
+
 ## Troubleshooting
 
 Please follow this guidelines when reporting bugs and feature requests:

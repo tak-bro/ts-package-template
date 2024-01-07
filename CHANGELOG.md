@@ -1,7 +1,13 @@
-# @lemoncloud/lemon-front-lib
+# ts-package-template
 
-## 1.3.12
+## 0.0.1
 
 ### Patch Changes
 
--   build: update project configuration
+-   setup jest
+
+## 0.0.0
+
+### Patch Changes
+
+-   setup project
